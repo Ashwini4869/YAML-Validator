@@ -10,10 +10,12 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <link rel="stylesheet" href="../assets/sass/style.css" />
+  <link rel="stylesheet" href="/sass/style.css" />
   <body>
     <!-- Loading Navbar -->
-    <div hx-get="/getNavbar" hx-swap="outerHTML">Loading...</div>
+    <div hx-get="/getNavbar" hx-trigger="load" hx-swap="outerHTML">
+      Loading...
+    </div>
     <p>Index file</p>
   </body>
 </html>

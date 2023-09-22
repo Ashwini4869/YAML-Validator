@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join("assets")));
+app.use(express.static(path.join(__dirname, "assets")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
