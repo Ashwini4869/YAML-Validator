@@ -16,6 +16,25 @@
     <div hx-get="/getNavbar" hx-trigger="load" hx-swap="outerHTML">
       Loading...
     </div>
+    <!-- Loading Editor -->
+    <div id="editor">Loading...</div>
     <p>Index file</p>
+    <div id="container" style="height: 500px"></div>
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+    <script>
+      require.config({
+        paths: { vs: "https://unpkg.com/monaco-editor@latest/min/vs" },
+      });
+
+      require(["vs/editor/editor.main"], function () {
+        var editor = monaco.editor.create(
+          document.getElementById("container"),
+          {
+            value: 'function hello() {\n\talert("Hello, Monaco!")\n}',
+            language: "javascript",
+          }
+        );
+      });
+    </script>
   </body>
 </html>

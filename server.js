@@ -16,8 +16,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/getNavbar", (req, res) => {
-  res.sendFile(path.join(__dirname + "/public/components/Navbar.html"));
+  res.sendFile(path.join(__dirname, "/public/components/Navbar.html"));
 });
 
+app.get("/getEditor", (req, res) => {
+  console.log("endpoint hit");
+  res.sendFile(path.join(__dirname, "/public/components/Editor.html"));
+});
 app.listen(PORT);
 console.log("Listening on port: " + PORT);
