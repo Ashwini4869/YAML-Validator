@@ -25,6 +25,11 @@
       <div id="container" style="height: 500px; width: 50%"></div>
       <div id="container2" style="height: 500px; width: 50%"></div>
     </div>
+    <!-- Loading Content -->
+    <div hx-get="/getContent" hx-trigger="load" hx-swap="outerHTML">
+      Loading...
+    </div>
+
     <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
     <script src="script.js"></script>
   </body>
