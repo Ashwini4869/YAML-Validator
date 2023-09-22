@@ -1,0 +1,52 @@
+.content-wrapper {
+  padding: 32px 32px 100px;
+  background: $programiz-brand-dark-layout-top-element;
+  border-left: $default-border;
+  border-top: $default-border;
+
+  @include mqmax("md") {
+    width: 100%;
+  }
+}
+
+.content {
+  @include e(title) {
+    color: $white;
+    font-size: 20px;
+    font-family: $programiz-brand-base-font;
+    margin-bottom: 8px;
+    font-weight: $programiz-content-title-font-weight;
+    line-height: 30px;
+  }
+
+  @include e(paragraph) {
+    color: $programiz-brand-dark-text-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: $programiz-brand-base-font-weight;
+    font-family: $programiz-brand-base-font;
+    line-height: 24px;
+
+    a {
+      color: $programiz-brand-dark-text-primary;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: $programiz-brand-tertiary;
+    }
+  }
+
+  @include e(image) {
+    margin-top: 32px;
+  }
+
+  @include e(img-wrapper) {
+    width: 713px;
+    height: 396px;
+  }
+}
+
+.content + .content {
+  margin-top: 32px;
+}

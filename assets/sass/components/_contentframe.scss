@@ -1,0 +1,10 @@
+.content-section {
+  background-color: $programiz-brand-dark-base-color;
+}
+.content-frame {
+  display: flex;
+
+  @include mqmax("md") {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,42 @@
+.mobile-top-bar {
+  padding: 7px;
+  position: sticky;
+  top: 50px;
+  z-index: $zindex-sticky;
+  display: none;
+  justify-content: center;
+  font-weight: $programiz-brand-base-font-weight;
+  background-color: $toggle-background;
+
+  @include mqmax("md") {
+    display: flex;
+  }
+}
+
+.pills-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pill {
+  color: $white;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: $programiz-brand-base-font;
+  font-weight: $programiz-brand-base-font-weight;
+  border: $default-border;
+}
+
+.code-pill {
+  border-radius: 4px 0 0 4px;
+}
+
+.output-pill {
+  border-radius: 0 4px 4px 0;
+}
+
+.toggle-active {
+  background-color: $programiz-brand-blue-color;
+}
