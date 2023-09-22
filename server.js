@@ -23,5 +23,9 @@ app.get("/getContent", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/components/Content.html"));
 });
 
+app.get("/getFooter", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/components/Footer.html"));
+});
+
 app.listen(PORT);
 console.log("Listening on port: " + PORT);

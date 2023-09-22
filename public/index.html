@@ -15,6 +15,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.28.2/min/vs/editor/editor.main.min.css"
   />
+  <link rel="stylesheet" href="/sass/pro-utils.css" />
   <body>
     <!-- Loading Navbar -->
     <div hx-get="/getNavbar" hx-trigger="load" hx-swap="outerHTML">
@@ -27,6 +28,10 @@
     </div>
     <!-- Loading Content -->
     <div hx-get="/getContent" hx-trigger="load" hx-swap="outerHTML">
+      Loading...
+    </div>
+    <!-- Loading Footer -->
+    <div hx-get="getFooter" hx-trigger="load" hx-swap="outerHTML">
       Loading...
     </div>
 
